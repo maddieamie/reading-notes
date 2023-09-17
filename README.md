@@ -279,3 +279,198 @@ return ( <App
 <img width="365" alt="notes for reading 04" src="https://github.com/maddieamie/reading-notes/assets/118625447/6e13c971-8cbc-4a21-bde3-1ab0eaef4c73">
 
 
+### Class 04 Reading
+
+[React Docs - Forms] (https://reactjs.org/docs/forms.html)
+
+**What is a ‘Controlled Component’?**
+
+When React controls what happens to the form after subsequent user input and what happens when the form submits. The form's value is controlled by React instead of the rendered HTML. The input's value is tied to React's state. "`<input type="text">`, `<textarea>`, and `<select>` all work very similarly - they all accept a value attribute that you can use to implement a controlled component."
+
+**Should we wait to store the users responses from the form into state when they submit the form OR should we update the state with their responses as soon as they enter them? Why.**
+
+I think we should update the state as they are typing it in so that a. it updates the state of what is rendering back to the user and b. they don't lose all their stuff if the page has to reload. 
+
+**How do we target what the user is entering if we have an event handler on an input field?**
+
+`this.state.value` like in this example:
+
+```
+Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+```
+
+
+[The Conditional (Ternary) Operator Explained](https://codeburst.io/javascript-the-conditional-ternary-operator-explained-cac7218beeff)
+
+**Written definitions & examples so I can actually memorize it instead of constantly looking it up**
+
+If/else statement:
+```
+if ( condition ) {
+  value if true;
+} else {
+  value if false;
+}
+```
+
+Ternary operator:
+```
+condition ? value if true : value if false
+```
+
++ The condition is what you’re actually testing. The result of your condition should be true or false or at least coerce to either boolean value.
++ A ? separates our conditional from our true value. Anything between the ? and the : is what is executed if the condition evaluates to true.
++ Finally a : colon. If your condition evaluates to false, any code after the colon is executed.
+
+_Multiple Operator examples_
+
+```let isStudent = true;
+let price = 12;
+isStudent ? (
+  price = 8,
+  alert('Please check for student ID')
+) : (
+  alert('Enjoy the movie')
+);
+```
++ checks if `isStudent` is true or false as a condition
++ it is true, so the one right after the `?` is executed to adjust price and send alert
++ if it _was_ false, then the block after the `:` would be executed
+
+**Why would we use a ternary operator?**
+
+To shorten your code and save time, I assume.
+
+**Rewrite the following statement using a ternary statement:**
+
+Original: 
+```
+if(x===y){
+  console.log(true);
+} else {
+  console.log(false);
+}
+```
+
+Rewrite:
+```
+x===y ? console.log(true) : console.log(false)
+```
+
+
+
+### Class 05 Reading
+
+[React Docs - Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+
+**General Notes**
+_Step one:  Break the UI into a component hierarchy_
++ Start by drawing boxes around every component and subcomponent in the mockup and naming them.
++ Separate your UI into components, where each component matches one piece of your data model.
++ <img width="508" alt="React Component Structure Notes" src="https://github.com/maddieamie/reading-notes/assets/118625447/11f28488-f67d-477a-ae63-312de4b8fcc7">
++ Arrange them into a hierarchy. FilterableProductTable => {SearchBar, ProductTable} => {ProductCategoryRow, ProductRow}
+
+_Step two:  Build a static version in React_
++ To build a static version of your app that renders your data model, you’ll want to build components that reuse other components and pass data using props.
++ Save state for later in the interactivity part.
++ You can either build “top down” by starting with building the components higher up in the hierarchy (like FilterableProductTable) or “bottom up” by working from components lower down (like ProductRow). In simpler examples, it’s usually easier to go top-down, and on larger projects, it’s easier to go bottom-up.
+  
+_Step three: Find the minimal but complete representation of UI state_
++ The most important principle for structuring state is to keep it DRY (Don’t Repeat Yourself). Figure out the absolute minimal representation of the state your application needs and compute everything else on-demand.
++ The filtered list of products isn’t state because it can be computed by taking the original list of products and filtering it according to the search text and value of the checkbox.
++ Things that remain unchanged over time, that are passed from a parent as props, and that are computed based on existing state/props are _NOT state_.
+  
+_Step four: Identify where your state should live_
++ you need to identify which component is responsible for changing this state, or _owns_ the state.
++ Decided where to put the state based on the steps below in the last note question.
+  
+_Step five: Add inverse data flow_
++  the form components deep in the hierarchy need to update the state in the parent.
++  [Deep Dive on Adding Interactivity](https://react.dev/learn/adding-interactivity)
+
+**What is the `single responsibility principle` and how does it apply to components?**
+
+A component should ideally only do one thing. If it ends up growing, it should be decomposed into smaller subcomponents.
+
+**What does it mean to build a ‘static’ version of your application?**
+
+You're building the outline of the hierarchy of components, their code, and then also what each component does without interactivity. Layout the functions and data as well.
+
+**Once you have a static application, what do you need to add?**
+
+You need to add the State, or the interactivity, into your application. 
+
+**What are the three questions you can ask to determine if something is state?**
+
+Which of these are state? Identify the ones that are not:
+
+1. Does it remain unchanged over time? If so, it isn’t state.
+2. Is it passed in from a parent via props? If so, it isn’t state.
+3. Can you compute it based on existing state or props in your component? If so, it definitely isn’t state!
+
+**How can you identify where state needs to live?**
+
+Follow the steps:
+1. Identify every component that renders something based on that state.
+2. Find their closest common parent component—a component above them all in the hierarchy.
+3. Decide where the state should live:
+  a. Often, you can put the state directly into their common parent.
+  b. You can also put the state into some component above their common parent.
+  c. If you can’t find a component where it makes sense to own the state, create a new component solely for holding the state and add it somewhere in the hierarchy above the common parent component.
+
+
+
+[Higher-Order Functions](https://eloquentjavascript.net/05_higher_order.html#h_xxCc98lOBK)
+
+**What is a “higher-order function”?**
+
+It passes another function as an argument, or returns another function.
+
+**Explore the `greaterThan` function as defined in the reading. In your own words, what is line 2 of this function doing?**
+
+In line 02, the function `greaterThan` is creating a function that takes in m as a parameter and compares it to the argument of n that is passed into the OC `greaterThan` function. The `greaterThan` higher-order function is determining what value you are comparing it to, and returns a function where you can compare a new value to the original parameter of `n`. 
+
+```
+function greaterThan(n) {
+  return m => m > n;
+}
+let greaterThan10 = greaterThan(10);
+console.log(greaterThan10(11));
+// → true
+```
+
+**Explain how either `map` or `reduce` operates, with regards to higher-order functions.**
+
+`map` : transforms an array of data passed into it and creates a new array of data with what was transformed.
+
+```
+function map(array, transform) {
+  let mapped = [];
+  for (let element of array) {
+    mapped.push(transform(element));
+  }
+  return mapped;
+}
+```
+
+`reduce`: 
++ You end up with 1 value by repeatedly taking a single element from the array and combining it with the current value.
++ The parameters to reduce are, apart from the array, a combining function and a start value. i.e. `(array, combine func, starting value)`
++ If your array parameter contains at least 1 element, you don't need the starting value param. It will take the first element of the array as its start value and start reducing at the second element.
+  
+```
+function reduce(array, combine, start) {
+  let current = start;
+  for (let element of array) {
+    current = combine(current, element);
+  }
+  return current;
+}
+
+console.log(reduce([1, 2, 3, 4], (a, b) => a + b, 0));
+// → 10
+```
+
+
+  
