@@ -472,5 +472,60 @@ console.log(reduce([1, 2, 3, 4], (a, b) => a + b, 0));
 // → 10
 ```
 
+## Module 2: Integrating The Back End
+
+### Class 06
+
+[What Google Learned From Its Quest to Build the Perfect Team](https://www.google.com/amp/mobile.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.amp.html)
+
+**Quotes**
++ Team members may behave in certain ways as individuals — they may chafe against authority or prefer working independently — but when they gather, the group’s norms typically override individual proclivities and encourage deference to the team.
++ Project Aristotle researchers concluded that understanding and influencing group norms were the keys to improving Google’s teams.
++ The right norms, in other words, could raise a group’s collective intelligence, whereas the wrong norms could hobble a team, even if, individually, all the members were exceptionally bright.
++ ‘‘As long as everyone got a chance to talk, the team did well,’’ Woolley said. ‘‘But if only one person or a small group spoke all the time, the collective intelligence declined.’
++ Second, the good teams all had high ‘‘average social sensitivity’’ — a fancy way of saying they were skilled at intuiting how others felt based on their tone of voice, their expressions and other nonverbal cues.
++ an exam known as the Reading the Mind in the Eyes test
++ as psychological safety — a group culture that the Harvard Business School professor Amy Edmondson defines as a ‘‘shared belief held by members of a team that the team is safe for interpersonal risk-taking.’’ Psychological safety is ‘‘a sense of confidence that the team will not embarrass, reject or punish someone for speaking up,’’ Edmondson wrote in a study published in 1999. ‘‘It describes a team climate characterized by interpersonal trust and mutual respect in which people are comfortable being themselves.’’
++ ‘‘Just having data that proves to people that these things are worth paying attention to sometimes is the most important step in getting them to actually pay attention,’’ Rozovsky told me. ‘‘Don’t underestimate the power of giving people a common platform and operating language.’’
+
+**To what extent did psychological safety impact your previous work experience?**
+
+It greatly impacted the needs of the staff and students, and how well colleagues collaborated with on another.
+
+**How does this article inform your approach to working with others moving forward?**
+
+To be honest, this wasn't new information to me. I am still working on how to connect with others best, but I'm not too bad at it.
+
+[How I explained REST to my brother](https://gist.github.com/brookr/5977550)
+
+**Who is Roy Fielding?**
+
+Wrote the first web servers & did research on how the internet works. His protocol: HTTP. APIS: computer communication.
+
+**Why don’t the techniques that we use in this class work well when we need to be able to talk to all of the machines in the world?**
+
+"Because they weren't designed to be used like that. When Fielding and his colleagues started building the web, being able to talk to any machine anywhere in the world was a primary concern. But most of the techniques developers later used to get computers to talk to each other didn't have those requirements. You just needed to talk to a small group of machines."
+
+**What is the HTTP protocol that Fielding and his friends created?**
+
+"The whole world wide web is built on an architectural style called “REST”. REST provides a definition of a “resource”, which is what those things point to."
+
+**What does a GET do?**
+
+ “polymorphism”: objects have different actions applied to them, different verbs but same nouns. " But HTTP is actually a general purpose protocol for applying verbs to nouns."
+Each of the systems would retrieve information from each other using a simple HTTP GET. 
+
+**What does a POST do?**
+
+If one system needs to add something to another system, it would use an HTTP verb of POST. 
+
+**What does PUT do?**
+
+Replaces something in another system. 
+
+**What does PATCH do?**
+
+Does a partial update of a system, similar to PUT.
+
 
   
