@@ -527,5 +527,70 @@ Replaces something in another system.
 
 Does a partial update of a system, similar to PUT.
 
+### Class 07
 
+[An Introduction to Node.js on sitepoint.com](https://www.sitepoint.com/an-introduction-to-node-js)
+
+**What is node.js?**
+
+"Node.js is an event-based, non-blocking, asynchronous I/O runtime that uses Google’s V8 JavaScript engine and libuv library." Event driven--everything happens in relation to an event that occurs. It's capable of handling a lot at once.
+
+**In your own words, what is Chrome’s V8 JavaScript Engine?**
+
+It is an open-source program that allows browers to run on Javascript and to execute Javascript on our own computers.
+
+**What does it mean that node is a JavaScript runtime?**
+
+JS runtime provides features/APIs to build Javascript based software, and adds additional APIs and functionality.
+
+**What is npm?**
+
+NPM is primarily used for managing and distributing open-source JavaScript libraries and packages, making it easier for developers to share and reuse code in their projects.
+
+**What version of node are you running on your machine?**
+
+~ node -v
+v20.8.0
+
+**What version of npm are you running on your machine?**
+
+~ npm -v
+6.13.4
+
+**What command would you type to install a library/package called ‘jshint’?**
+
+npm install -g jshint
+
+**What is node used for?**
+
+Node lets Javascript run on the server. Real time applications like chat sites, live document edits, or apps that require collaboration. "It’s also a good fit for building APIs where you’re handling lots of requests that are I/O driven (such as those needing to perform operations on a database), or for sites involving data streaming, as Node makes it possible to process files while they’re still being uploaded." It works well with JSON, which is ubiquitous. 
+
+"For example it can be used as a scripting language to automate repetitive or error prone tasks on your PC. It can also be used to write your own command line tool, such as this Yeoman-Style generator to scaffold out new projects.
+
+Node.js can also can be used to build cross-platform desktop apps and even to create your own robots."
+
+![Source: Introduction To Node.js by Prof. Christian Maderazo, James Santo](https://uploads.sitepoint.com/wp-content/uploads/2012/10/1516152673node_event_loop.png)
+
+[6 Reasons for Pair Programming](https://www.codefellows.org/blog/6-reasons-for-pair-programming/)
+
+**What are the 6 reasons for pair programming?**
+1. Greater efficiency
+2. Engaged collaboration
+3. Learning from fellow students
+4. Social skills
+5. Job interview readiness
+6. Work environment readiness
+
+**In your experience, which of these reasons have you found most beneficial?**
+
+I haven't been able to sync up with others for work times in this self-paced, but the chatting about the curriculum has been helpful. I'd like to practice this sometime, maybe I can with some friends I make in the future.
+
+**How does pair programming work?**
+
+Driver creates code and is responsible for doing the physical coding, while the Navigator provides feedback, looks at the big picture, and looks up resources.
+
+**Bookmark and Review**
+[Geocoding API Docs](https://locationiq.com/)
+[Axios docs](https://www.npmjs.com/package/axios)
+[MDN async and await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
   
