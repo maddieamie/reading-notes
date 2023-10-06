@@ -591,6 +591,47 @@ Driver creates code and is responsible for doing the physical coding, while the 
 
 **Bookmark and Review**
 [Geocoding API Docs](https://locationiq.com/)
+
 [Axios docs](https://www.npmjs.com/package/axios)
+
+
+**Async Programming Notes**
+[MDN Intro to Async](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
 [MDN async and await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
+
+_the problem with synchronous programming_
+
++ "At each point, the browser waits for the line to finish its work before going on to the next line. It has to do this because each line depends on the work done in the preceding lines." This is synchronous programming.
++ What if the synchronous function takes a long time to run?
++ Async functions: Start a long-running operation by calling a function.
+Have that function start the operation and return immediately, so that our program can still be responsive to other events.
+Notify us with the result of the operation when it eventually completes.
++ 
+
+
+### Class 07
+
+[API Design Best Practices](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
+
+**What does REST stand for?**
+
+**REST APIs are designed around a ____.**
+
+**What is an identifier of a resource? Give an example.**
+
+**What are the most common HTTP verbs?**
+
+**What should the URIs be based on?**
+
+**Give an example of a good URI.**
+
+**What does it mean to have a ‘chatty’ web API? Is this a good or a bad thing?**
+
+**What status code does a successful GET request return?**
+
+**What status code does an unsuccessful GET request return?**
+
+**What status code does a successful POST request return?**
+
+**What status code does a successful DELETE request return?**
   
