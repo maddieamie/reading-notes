@@ -606,10 +606,10 @@ _the problem with synchronous programming_
 + Async functions: Start a long-running operation by calling a function.
 Have that function start the operation and return immediately, so that our program can still be responsive to other events.
 Notify us with the result of the operation when it eventually completes.
-+ 
+  
 
 
-### Class 07
+### Class 08
 
 [API Design Best Practices](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
 
@@ -634,4 +634,70 @@ Notify us with the result of the operation when it eventually completes.
 **What status code does a successful POST request return?**
 
 **What status code does a successful DELETE request return?**
+
+[RegExr Cheatsheet](https://regexr.com/)
+
+[Regex Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+
+[Regex 101](https://regex101.com/)
+
+
+### Class 09
+
+
+[Functional Programming Concepts](https://medium.com/the-renaissance-developer/concepts-of-functional-programming-in-javascript-6bc84220d2aa)
+
+**What is functional programming?**
+
+**What is a pure function and how do we know if something is a pure function?**
+
+**What are the benefits of a pure function?**
+
+**What is immutability?**
+
+**What is Referential transparency?**
+
+
+[Node JS Tutorial for Beginners #6 - Modules and require()](https://www.youtube.com/watch?v=xHLd36QoS4k)
+
+**What is a module?**
+
+**What does the word ‘require’ do?**
+
+**How do we bring another module into the file the we are working in?**
+
+**What do we have to do to make a module available?**
+
+
+
+### Class 10
+
+[Understanding the JavaScript Call Stack](https://medium.freecodecamp.org/understanding-the-javascript-call-stack-861e41ae61d4)
+
+**What is a ‘call’?**
+
+**How many ‘calls’ can happen at once?**
+
+**What does LIFO mean?**
+
+**Draw an example of a call stack and the functions that would need to be invoked to generate that call stack.**
+
+**What causes a Stack Overflow?**
+
+
+[JavaScript error messages](https://codeburst.io/javascript-error-messages-debugging-d23f84f0ae7c)
+
+**What is a ‘reference error’?**
+
+**What is a ‘syntax error’?**
+
+**What is a ‘range error’?**
+
+**What is a ‘type error’?**
+
+**What is a breakpoint?**
+
+**What does the word ‘debugger’ do in your code?**
+
+[JavaScript errors reference on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors)
   
