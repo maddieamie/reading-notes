@@ -641,7 +641,11 @@ like customer/1/orders could find all the orders for customer 1, and any other r
 
 **What does it mean to have a ‘chatty’ web API? Is this a good or a bad thing?**
 
+An API where there are too many small requests for smaller bits of information--generally not ideal. Try to design bigger resources that can be retrieved in a single request--if feasible. If it's too big, then it can increase the bandwidth cost and latency of a request. 
+
 **What status code does a successful GET request return?**
+
+
 
 **What status code does an unsuccessful GET request return?**
 
