@@ -614,16 +614,30 @@ Notify us with the result of the operation when it eventually completes.
 [API Design Best Practices](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
 
 **What does REST stand for?**
+Representational State Transfer
+
 
 **REST APIs are designed around a ____.**
+"resource" -- any kind of object, data or service that can be accessed by the client.
+
+
 
 **What is an identifier of a resource? Give an example.**
 
+a URI that uniquely identifies that resource. a customer order or request for information. 
+
 **What are the most common HTTP verbs?**
+
+GET, POST, PUT, PATCH, & DELETE
 
 **What should the URIs be based on?**
 
+Resource URIs should be based on the resource itself and not the methods or operations on the resource. 
+
 **Give an example of a good URI.**
+
+Something simple that can be flexible when the inventories and data in the backend change. Not too specific. 
+like customer/1/orders could find all the orders for customer 1, and any other requests can be additional URIs
 
 **What does it mean to have a ‘chatty’ web API? Is this a good or a bad thing?**
 
