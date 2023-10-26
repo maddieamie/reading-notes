@@ -645,13 +645,20 @@ An API where there are too many small requests for smaller bits of information--
 
 **What status code does a successful GET request return?**
 
-
+200 OK
 
 **What status code does an unsuccessful GET request return?**
 
+if it is not found, it will be a 404. If it fulfilled the request but returned no content, then it is a 204.
+
 **What status code does a successful POST request return?**
 
+201-- content created. 
+
 **What status code does a successful DELETE request return?**
+
+204-- no content, it has been successfully handled. 
+
 
 [RegExr Cheatsheet](https://regexr.com/)
 
