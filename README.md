@@ -674,26 +674,40 @@ if it is not found, it will be a 404. If it fulfilled the request but returned n
 
 **What is functional programming?**
 
+A style of building the structure of computer programs and elements that treats computing as evaluating functions and does not change state or data.
+
 **What is a pure function and how do we know if something is a pure function?**
+It returns the same result when given the same input. It does not rely on global objects that are not passed into it as params, it's more self-contained. It does not have a random internal generator within it. It will not modify any global obj or param passed by reference. 
 
 **What are the benefits of a pure function?**
 
+The outputs are predictable and the inputs are known. You can make exact predictive statements.
+
 **What is immutability?**
+
+Changing the value in stored in memory changes the memory itself. Immutability does not allow changes in the memory location. Strings are immuteable, so every time they are reassigned a different value, they are changing the memory state of that string. 
 
 **What is Referential transparency?**
 
+If two functions are given the same inputs, then they return the same result. So if they are pure functions, which work with immutable data, then they provide referential transparency. 
 
 [Node JS Tutorial for Beginners #6 - Modules and require()](https://www.youtube.com/watch?v=xHLd36QoS4k)
 
 **What is a module?**
 
+Another js file with piece of code that has a certain functionality that we can then call upon when we need it. If we edit the modules, it makes it easier to expand and develop on the application in the future, because one file does not contain all functionality of the entire application. We can just change one part of that functionality in its self-contained module.  
+
 **What does the word ‘require’ do?**
+
+It calls the path to the module. 
 
 **How do we bring another module into the file the we are working in?**
 
+The method is not available to us outside the module so we need to bring it into the file.  We have to say exactly what part of the module we would like to use. 
+
 **What do we have to do to make a module available?**
 
-
+We need `require('./count');` in our main app file and set it equal to a variable like `var counter= require('./count');`, and then `module.exports = counter;` in our count.js module file. The exports part tells us what in our module is being made available when you call a file path to require it. Then you can call the variable `counter` in your app.js file to run that method as usual, like a method with params = `counter(['shuaun', 'blahh'])`
 
 ### Class 10
 
@@ -701,28 +715,50 @@ if it is not found, it will be a 404. If it fulfilled the request but returned n
 
 **What is a ‘call’?**
 
+function invocation in javascript. It's done synchronously, one at a time, top to bottom of the code. 
+
 **How many ‘calls’ can happen at once?**
+
+one.
 
 **What does LIFO mean?**
 
+"It means that the last function that gets pushed into the stack is the first to be pop out, when the function returns."
+
 **Draw an example of a call stack and the functions that would need to be invoked to generate that call stack.**
+![IMG_9E001EFC658E-1](https://github.com/maddieamie/reading-notes/assets/118625447/2e1d40d9-1ea9-4bdc-a2a0-25b77b904183)
+
 
 **What causes a Stack Overflow?**
 
+A function that calls itself without an exit point. It runs until the browswer throws a Maximum call stack size exceeded, and thats the overflow.
+Is that why they call the help forums that?
 
 [JavaScript error messages](https://codeburst.io/javascript-error-messages-debugging-d23f84f0ae7c)
 
 **What is a ‘reference error’?**
 
+Variable is not yet defined or not defined in the proper way.
+
 **What is a ‘syntax error’?**
+
+When you use invalid or incorrect syntax, it can't be parsed.
 
 **What is a ‘range error’?**
 
+When an object's length is invalid when your code evokes it. 
+
 **What is a ‘type error’?**
+
+The type of thing you are trying to use is incompatible with how you are using it, or inaccessible.
 
 **What is a breakpoint?**
 
+A defined location in your code where it will stop running so you can examine what has happened until that point and what is being returned. 
+
 **What does the word ‘debugger’ do in your code?**
+
+It creates a breakpoint up until the point you define, stops executing at that line.
 
 [JavaScript errors reference on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors)
   
