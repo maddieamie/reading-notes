@@ -762,3 +762,106 @@ It creates a breakpoint up until the point you define, stops executing at that l
 
 [JavaScript errors reference on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors)
   
+## Module 3
+
+### Class 11
+
+[nosql vs sql](https://www.thegeekstuff.com/2014/01/sql-vs-nosql-db/?utm_source=tuicool)
+
+1. Fill in the chart below with five differences between SQL and NoSQL databases:
+
+   | SQL    | NoSQL |
+   | ----------- | ----------- |
+   |             |             |
+   |             |             |
+   |             |             |
+   |             |             |
+
+   1. What kind of data is a good fit for an SQL database?
+   1. Give a real world example.
+   1. What kind of data is a good fit a NoSQL database?
+   1. Give a real world example.
+   1. Which type of database is best for hierarchical data storage?
+   1. Which type of database is best for scalability?
+
+[sql vs nosql](https://www.youtube.com/watch?v=ZS_kXvOeQ5Y)(Video)
+
+  1. What does SQL stand for?
+  1. What is a relational database?
+  1. What type of structure does a relational database work with?
+  1. What is a 'schema'?
+  1. What is a NoSQL database?
+  1. How does it work?
+  1. What is inside of a MongoDB database?
+  1. Which is more flexible - SQL or MongoDB? and why.
+  1. What is the disadvantage of a NoSQL database?
+
+ Bookmark and Review
+
+- [mongoose api](https://mongoosejs.com/docs/api.html#Model)
+- [React Router](https://reactrouter.com/web/api/BrowserRouter)
+
+
+### Class 12
+
+[Status Codes Based On REST Methods](https://www.moesif.com/blog/technical/api-design/Which-HTTP-Status-Code-To-Use-For-Every-CRUD-App/)
+
+1. In your own words, describe what each group of status code represents:
+
+   - 100's =
+   - 200's =
+   - 300's =
+   - 400's =
+   - 500's =
+
+1. What is a status code 202?
+1. What is a status code 308?
+1. What code would you use if an update didn't return data to a client?
+1. What code would you use if a resource used to exist but no longer does?
+1. What is the 'Forbidden' status code?
+
+[Build A REST API With Node.js, Express, & MongoDB - Quick](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) - First 20 minutes
+
+1. Why do we need to pull our MongoDB database string out of our server and put it into our .env?
+1. What is middleware?
+1. What does `app.use(express.json())` do?
+1. What does the `/:id` mean in a route?
+1. What is the difference between `PUT` and `PATCH`?
+1. How do you make a default value in a schema?
+1. What does a `500` error status code mean?
+1. What is the difference between a status `200` and a status `201`?
+
+### Class 13
+
+[CRUD Basics](https://medium.com/geekculture/crud-operations-explained-2a44096e9c88)
+
+   1. Which HTTP method would you use to update a record through an API?
+   1. Which REST methods require an ID parameter?
+
+[Speed Coding: Building a CRUD API](https://www.youtube.com/watch?v=EzNcBhSv1Wo)
+
+  1. What's the relationship between REST and CRUD?
+  1. If you had to describe the process of creating a RESTful API in 5 steps, what would they be?
+
+### Class 15
+
+- [What is OAuth](https://www.csoonline.com/article/3216404/what-is-oauth-how-the-open-authorization-framework-works.html)
+
+  1. What is OAuth?
+  1. Give an example of what using OAuth would look like.
+  1. How does OAuth work? What are the steps that it takes to authenticate the user?
+  1. What is OpenID?
+
+- [Authorization and Authentication flows](https://auth0.com/docs/flows)
+
+  1. What is the difference between authorization and authentication?
+  1. What is Authorization Code Flow?
+  1. What is Authorization Code Flow with Proof Key for Code Exchange (PKCE)?
+  1. What is Implicit Flow with Form Post?
+  1. What is Client Credentials Flow?
+  1. What is Device Authorization Flow?
+  1. What is Resource Owner Password Flow?
+
+Bookmark and Review
+
+- [Auth0 for single page apps](https://auth0.com/docs/libraries/auth0-react)
