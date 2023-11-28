@@ -770,35 +770,68 @@ It creates a breakpoint up until the point you define, stops executing at that l
 
 1. Fill in the chart below with five differences between SQL and NoSQL databases:
 
-   | SQL    | NoSQL |
-   | ----------- | ----------- |
-   |             |             |
-   |             |             |
-   |             |             |
-   |             |             |
-SQL: relational database // table based
+SQL: relational database // table based, schema that is predefined, vertically scalable by increasing hardware,
+structured query language for defining and manipulating data. 
 
-NoSQL: non-relational // document based, key-value pairs, graphs, or wide-column
+NoSQL: non-relational // document based, key-value pairs, graphs, or wide-column, no standard schema (dynamic schema for 
+unstructured data), horizontally scalable by increasing servers to reduce load, queries are focused on a collection of documents with syntax that 
+varies from database to database 
+
 
    1. What kind of data is a good fit for an SQL database?
-
-   1. Give a real world example.
-   1. What kind of data is a good fit a NoSQL database?
-   1. Give a real world example.
-   1. Which type of database is best for hierarchical data storage?
-   1. Which type of database is best for scalability?
+  a complex query intensive environment with a need for power, and heavy duty transactional type applications 
+   
+1. Give a real world example.
+My SQL database. 
+   
+1. What kind of data is a good fit a NoSQL database?
+  they fit better for a hierarchical data storage with key-value pairs, similar to JSON data. Highly preferred for large data sets. Hbase is an example. 
+   
+1. Give a real world example.
+Mongo DB
+   
+1. Which type of database is best for hierarchical data storage?
+NoSQL
+   
+1. Which type of database is best for scalability?
+SQL
 
 [sql vs nosql](https://www.youtube.com/watch?v=ZS_kXvOeQ5Y)(Video)
 
   1. What does SQL stand for?
+structured query language 
+
   1. What is a relational database?
+Works with tables and has a clear schema that we can call and update. 
+Joins retrieve related data
+
   1. What type of structure does a relational database work with?
+It can't add more than is defined for the table of data
+All records follow a schema
+Work with related multiple tables -- set up the relations between the tables
+
+
   1. What is a 'schema'?
+It defines the type of data for a relational database-- the organization and logic
+of your data within the database. 
+
   1. What is a NoSQL database?
+Able to store lots of data in an efficient way. 
+You don't have to use the same schema for document type data 
+
+
   1. How does it work?
+Generally there are no relations, though you could set them up. 
+You store infomation in collections.
+Have less time taken for relational querying but then you have to update multiple
+collections at once. 
+
   1. What is inside of a MongoDB database?
   1. Which is more flexible - SQL or MongoDB? and why.
+MongoDB is more flexible because you can hold multiple types of data. 
+
   1. What is the disadvantage of a NoSQL database?
+They don't support ACID (atomicity, consistency, isolation, durability)
 
  Bookmark and Review
 
