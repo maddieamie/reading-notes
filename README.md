@@ -776,8 +776,12 @@ It creates a breakpoint up until the point you define, stops executing at that l
    |             |             |
    |             |             |
    |             |             |
+SQL: relational database // table based
+
+NoSQL: non-relational // document based, key-value pairs, graphs, or wide-column
 
    1. What kind of data is a good fit for an SQL database?
+
    1. Give a real world example.
    1. What kind of data is a good fit a NoSQL database?
    1. Give a real world example.
