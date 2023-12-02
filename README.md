@@ -845,17 +845,26 @@ They don't support ACID (atomicity, consistency, isolation, durability)
 
 1. In your own words, describe what each group of status code represents:
 
-   - 100's =
-   - 200's =
-   - 300's =
-   - 400's =
-   - 500's =
+   - 100's = informational status codes that tell us what's happening in requests
+   - 200's = a request was successfully made, but that doesn't mean it fully processed successfully
+   - 300's = redirect codes -- tells the client that what they were looking for isn't where they were looking for it anymore
+   - 400's = client error codes --" timeouts, wrong URI, missing authentication, etc. A client is sending incorrect input and should confirm the input parameters are correct before retrying the request."
+   - 500's = server error codes, usually best for client to retry their request
 
 1. What is a status code 202?
+   something was created! Should return a location header with a url
+   
 1. What is a status code 308?
+   Permanent Redirect: This tells the client to use another URL to access the resource and not use the current URL anymore.
+   
 1. What code would you use if an update didn't return data to a client?
+    No Content - A proper code for updates that don’t return data to the client, for example when just saving a currently edited document.
+   
 1. What code would you use if a resource used to exist but no longer does?
+   410 Gone - This is like 404 but we know that the resource existed in the past, but it got deleted or somehow moved, and we don’t know where.
+   
 1. What is the 'Forbidden' status code?
+   403 Forbidden - The client has authorized or doesn’t need to authorize itself, but still has no permissions to access the resource.
 
 [Build A REST API With Node.js, Express, & MongoDB - Quick](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) - First 20 minutes
 
@@ -873,7 +882,10 @@ They don't support ACID (atomicity, consistency, isolation, durability)
 [CRUD Basics](https://medium.com/geekculture/crud-operations-explained-2a44096e9c88)
 
    1. Which HTTP method would you use to update a record through an API?
+      PUT
+      
    1. Which REST methods require an ID parameter?
+      PUT & DELETE
 
 [Speed Coding: Building a CRUD API](https://www.youtube.com/watch?v=EzNcBhSv1Wo)
 
@@ -885,19 +897,51 @@ They don't support ACID (atomicity, consistency, isolation, durability)
 - [What is OAuth](https://www.csoonline.com/article/3216404/what-is-oauth-how-the-open-authorization-framework-works.html)
 
   1. What is OAuth?
+     OAuth is an open-standard authorization protocol or framework that describes how unrelated servers and services can safely allow authenticated access to their assets without actually sharing the initial, related, single logon credential.
+     
   1. Give an example of what using OAuth would look like.
+  Auth0 allows a user to log into a new website using their login credentials from a previous thing they are already signed into. They may have to approve the new site's ability to access user info, but then they can use that app using other credentials they already have.
+
   1. How does OAuth work? What are the steps that it takes to authenticate the user?
+    1. The first website's user info connects to the second website using Auth0's verified identity from the first one.
+    2. Second website using Auth0 creates a request token & secret for a one-time transaction.
+    3. The token and secret are given to initate the user's client software from first site.
+    4. Client's software presents it to authorization provider.
+    5. Client is asked to authenticate and approve the authorization transaction.
+    6. The user approves (or their software silently approves) a particular transaction type at the first website.
+    7. The user is given an approved access token (notice it’s no longer a request token).
+    8. The user gives the approved access token to the first website.
+    9. The first website gives the access token to the second website as proof of authentication on behalf of the user.
+    10. The second website lets the first website access their site on behalf of the user.
+    11. The user sees a successfully completed transaction occurring.
+
+
   1. What is OpenID?
+     It uses authentication instead of authorization methods-- you need to prove you're human, hurrah. " In 2014, OpenID Connect was released, which reinvented OpenID as an authentication layer for OAuth. In this space, OpenID has found a niche, and the two technologies now complement each other in many implementations."
 
 - [Authorization and Authentication flows](https://auth0.com/docs/flows)
 
   1. What is the difference between authorization and authentication?
+     Authorization allows a machine to log you in using previously allowed services to communicate with a new website.
+     Authentication requires you to prove that you are a user and you are who you say you are. 
+     
   1. What is Authorization Code Flow?
+     [Authorization Code Flow](https://images.ctfassets.net/cdy7uua7fh8z/2nbNztohyR7uMcZmnUt0VU/2c017d2a2a2cdd80f097554d33ff72dd/auth-sequence-auth-code.png)
+     
   1. What is Authorization Code Flow with Proof Key for Code Exchange (PKCE)?
+     [Proof Key Diagram](https://images.ctfassets.net/cdy7uua7fh8z/3pstjSYx3YNSiJQnwKZvm5/33c941faf2e0c434a9ab1f0f3a06e13a/auth-sequence-auth-code-pkce.png)
+     
   1. What is Implicit Flow with Form Post?
+     [Implicit Flow](https://images.ctfassets.net/cdy7uua7fh8z/6m0uE4E7Hpzbdhyh9dEuYK/e36c910ff47a7540bf27e23c02822624/auth-sequence-implicit-form-post.png)
+     
   1. What is Client Credentials Flow?
+     [Client Credentials](https://images.ctfassets.net/cdy7uua7fh8z/2waLvaQdM5Fl5ZN5xUrF2F/326677a1322f7fadeaffd9a32777824a/2023-09-22_11-06-54.png)
+     
   1. What is Device Authorization Flow?
+     [Device Authorization](https://images.ctfassets.net/cdy7uua7fh8z/1A6jpG3W1H6SC9ZK92NyKd/40af53209f90a7c392f621f329fb4424/auth-sequence-device-auth.png)
+     
   1. What is Resource Owner Password Flow?
+     [Resource Owner](https://images.ctfassets.net/cdy7uua7fh8z/4EeYNcnVX1RFcTy5z4lP4v/c3e4d22e6f8bf558caf07338a7388097/ROP_Grant.png)
 
 Bookmark and Review
 
