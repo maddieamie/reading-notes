@@ -869,13 +869,25 @@ They don't support ACID (atomicity, consistency, isolation, durability)
 [Build A REST API With Node.js, Express, & MongoDB - Quick](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) - First 20 minutes
 
 1. Why do we need to pull our MongoDB database string out of our server and put it into our .env?
+    process.env.VARIABLE  and do require('dotenv').config();
+     
 1. What is middleware?
+Code that runs when the server gets a request but before it gets to your routes.
+   
 1. What does `app.use(express.json())` do?
+It requires us to use express as our middleware software. It allows us to accept json as a body.
+   
 1. What does the `/:id` mean in a route?
+   It is a parameter with a colon, and the id is the specific thing.
+   
 1. What is the difference between `PUT` and `PATCH`?
+    Patch: only updates based on what the user passes to us.
+   Put: It updates all the information about the subscriber at once. 
 1. How do you make a default value in a schema?
+   default: Date.now
 1. What does a `500` error status code mean?
-1. What is the difference between a status `200` and a status `201`?
+   Internal server error: actual server had an error, it doesn't
+1. What is the difference between a status `200` and a status `201`? 200: ok, 201: ok, something was created.
 
 ### Class 13
 
