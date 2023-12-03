@@ -909,18 +909,25 @@ It requires us to use express as our middleware software. It allows us to accept
 Consider the history: [That Time When Women Stopped Coding](https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding)
 
 - What occurred during the same time as the beginning of the decline of women in computer science?
+  They started marketing computers towards men and then women were socialized into not thinking they would be good at it. The expectations of this affected Patricia Ordóñez when she was attempting to major in CS, as she didn't grow up with a computer at home.
   
 - Why does it matter that males had been playing on computers growing up?
+  They had an advantage in how general software worked when they went to college. It's a step up. If you have to learn how to use a computer at the same time as learning how to do a bunch of stuff on the computer, you will be a little behind people who had that step up.
   
 Review the data: [Employee breakdown of key technology companies](https://informationisbeautiful.net/visualizations/diversity-in-tech/)
+Interesting that the higher the position, the fewer women are there.
 
 Ask the question: [Why diversity matters to your tech company](https://www.usatoday.com/story/tech/columnist/2015/07/21/why-diversity-matters-your-tech-company/30419871/)
 
 - When are diversity efforts most successful?
-
+  When there is a meaningful commitment from company leaders, and those leaders have a full understanding of what that commitment means.
+  
 - Why do diverse companies perform better?
+  Most likely because they are able to envision and meet expectations of a more diverse population. They can see more solutions to problems and solve them accordingly. They may also have a more empathetic base with a more diverse set of people. "When the employees of an organization better represent their users and desired users, they will build more effectively for those groups."
 
 - Give an example of how a diverse company can serve a diverse user base or vise-versa.
+  If you consider different ways that different users will utilize your products, then you can anticipate problems more effectively. If your team is homogenous, their collective experience will miss out on other perspectives simply because it didn't occur to them. The right-handed vs left-handed example of youtube developers having their left-handed users upload videos upside down is striking.
+  It brings to mind Siri not being able to recognize female voices or accented English in general but picking up a general US American male voice in a crowded space, because the people programming Siri were not diverse. 
 
 ### Class 15
 
