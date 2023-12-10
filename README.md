@@ -902,7 +902,15 @@ It requires us to use express as our middleware software. It allows us to accept
 [Speed Coding: Building a CRUD API](https://www.youtube.com/watch?v=EzNcBhSv1Wo)
 
   1. What's the relationship between REST and CRUD?
+CRUD seems to be the methods that you use with your server to create and update resources, while Rest is how the client deals with your application that is using CRUD operations, and the general structure of that application. 
+
   1. If you had to describe the process of creating a RESTful API in 5 steps, what would they be?
+
+- Create your server and make sure it is connected to a database.
+- Make your CRUD paths with the specific endpoints.
+- Make your functions in your server to handle those endpoints.
+- Validate your data and make sure the correct responses, errors, and status codes are going to your client.
+- Validate authorization to your database. 
 
 ### Class 14
 
