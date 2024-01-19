@@ -6,5 +6,5 @@
  ## [Module 3](https://github.com/maddieamie/reading-notes/blob/main/301/301-Module%203.md#module-3-full-stack-and-auth0)
 
  # Python 401
-   ## Prework
-   ### SQL and Databases
+   ## [Prework](https://github.com/maddieamie/reading-notes/blob/main/Python/Prework.md#prework-notes)
+   
