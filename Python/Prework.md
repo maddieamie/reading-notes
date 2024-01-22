@@ -10,6 +10,9 @@
 - Each database has its own supported set of mathematical, string, and date functions that can be used in a query, which you can find in their own respective docs.
 - *SELECT col_expression AS expr_description, … FROM mytable;*
 - The GROUP BY clause works by grouping rows that have the same value in the column specified.
+- Apply WHERE so that the correct number of rows are updated, unless you want all rows to be changed.
+- Use SELECT to make sure you are querying the correct data before deleting them, if you want to double check.
+- Create schemas with the types of data. 
 
 **Screenshots**
 <img width="409" alt="Lesson 1" src="https://github.com/maddieamie/reading-notes/assets/118625447/d920dd58-ea9d-44da-8db5-322587639097">
@@ -22,7 +25,14 @@
 <img width="571" alt="Lesson 8" src="https://github.com/maddieamie/reading-notes/assets/118625447/e8ca50b6-807a-43ef-9e46-9644f7322c8e">
 <img width="540" alt="Lesson 9" src="https://github.com/maddieamie/reading-notes/assets/118625447/2c9a3b35-e3ce-47e4-bcc4-9500792b9ec1">
 <img width="605" alt="Lesson 10" src="https://github.com/maddieamie/reading-notes/assets/118625447/f0e2cf51-2360-4458-aba9-f6c2b62561e6">
-
+<img width="586" alt="Lesson 11" src="https://github.com/maddieamie/reading-notes/assets/118625447/79a426cb-19f5-4912-9dd3-9f831bdc55c3">
+<img width="705" alt="Lesson 12" src="https://github.com/maddieamie/reading-notes/assets/118625447/d8eea154-24da-4f95-8d35-aa25dbe89759">
+<img width="693" alt="Lesson 13" src="https://github.com/maddieamie/reading-notes/assets/118625447/617e807e-16c0-4b8c-8720-9e33fa4b0572">
+<img width="698" alt="Lesson 14" src="https://github.com/maddieamie/reading-notes/assets/118625447/1a12ce7e-69d6-4db5-896d-d148582adf7f">
+<img width="697" alt="Lesson 15" src="https://github.com/maddieamie/reading-notes/assets/118625447/f0a60b77-b06a-44f6-ada7-b072fe74f6d5">
+<img width="652" alt="Lesson 16" src="https://github.com/maddieamie/reading-notes/assets/118625447/bd125a8c-1630-48d7-b079-c6281b3c09a5">
+<img width="705" alt="Lesson 17" src="https://github.com/maddieamie/reading-notes/assets/118625447/52f07408-a008-44c8-ab8a-6abd925eb46f">
+<img width="685" alt="Lesson 18" src="https://github.com/maddieamie/reading-notes/assets/118625447/90c22dd4-ce65-4db3-9f99-edd092c2af0d">
 
 
 **Notes**
