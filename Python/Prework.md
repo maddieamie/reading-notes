@@ -54,6 +54,29 @@
 - root / - top of the directory
 - absolute path -> begin with / in relation to root directory
 - relative path -> specify a location in relation to where we currently are in the system, does not begin with /
+- ~ a shortcut for your home directory
+- . reference to your current directory
+- ../../ go up two directories, .. up a directory
+- cd / == cd ~/Documents == cd ../../
+- cd sends you back to your home directory without any arguments
+
+  **More About Files**
+  - Linux is case sensitive
+  - handle files with spaces --> cd 'Holiday Photos'
+  - ls -a list the contents of a directory, including hidden files.
   
+  **Manual Pages**
+  - man <command> - Look up the manual page for a particular command.
+- man -k <search term> -Do a keyword search for all manual pages containing the given search term.
+- /<term> -Within a manual page, perform a search for 'term'
+- n -After performing a search within a manual page, select the next found item.
 
-
+ **File Manipulation**
+- mkdir + name -- make directory
+- rmdir [options] <Directory> - remove directory
+-  -p which tells mkdir to make parent directories as needed (demonstration of what that actually means below). The second one is -v which makes mkdir tell us what it is doing 
+- touch -- make blank files
+- cp [options] <source> <destination> -- copy
+- mv [options] <source> <destination> -- move
+- rm [options] <file> -- cannot be undone, but removes or deletes files
+- -r When rm is run with the -r option it allows us to remove directories and all files and directories contained within. -i with -r will make it interactive so you know which files you are removing with prompts first. 
