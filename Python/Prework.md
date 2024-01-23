@@ -39,6 +39,21 @@
 <img width="579" alt="Useful operators for SQL" src="https://github.com/maddieamie/reading-notes/assets/118625447/af19ab73-512d-4faa-8b5a-5d0f6f006b8f">
 <img width="609" alt="Common aggregate functions" src="https://github.com/maddieamie/reading-notes/assets/118625447/3ede1c9e-6876-4617-9161-0f7721959dac">
 
+## Command Line
 
+**The Command Line** 
+- bash -- which stands for Bourne again shell
+- echo - shows your current shell
+- arrow up to previous commands
+
+**Basic Navigation** 
+- pwd- print working directory
+- ls - shows what's in our current directory
+- ls -l long listing about the files in directory
+- ls /etc list the directory's contents
+- root / - top of the directory
+- absolute path -> begin with / in relation to root directory
+- relative path -> specify a location in relation to where we currently are in the system, does not begin with /
+  
 
 
