@@ -33,9 +33,12 @@ Mutable values can have multiple aliases, where as immutable values cannot alias
 **Notes for me: 
 **
 Assignment never copies data-- changes are visible through all names of the values. 
-a mutable aliasing. <img width="395" alt="Screenshot 2024-01-24 at 10 55 33 AM" src="https://github.com/maddieamie/reading-notes/assets/118625447/1d59a689-9487-4f78-9f28-0e26775d8510">
+a mutable aliasing.
+
+<img width="395" alt="Screenshot 2024-01-24 at 10 55 33 AM" src="https://github.com/maddieamie/reading-notes/assets/118625447/1d59a689-9487-4f78-9f28-0e26775d8510">
 
 immutable values can't alias -- ints, floats, strings, tuples. 
+
 <img width="298" alt="Screenshot 2024-01-24 at 10 58 56 AM" src="https://github.com/maddieamie/reading-notes/assets/118625447/407c5038-30b2-4096-b1d9-e7f7d2320bec">
 
 Write values that return new lists instead of mutating to avoid future confusion, as advice from Ned Batchedler. 
