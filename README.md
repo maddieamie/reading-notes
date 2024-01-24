@@ -7,4 +7,5 @@
 
  # Python 401
    ## [Prework](https://github.com/maddieamie/reading-notes/blob/main/Python/Prework.md#prework-notes)
+   ## [Module 1](https://github.com/maddieamie/reading-notes/blob/main/Python/Module%201.md)
    
