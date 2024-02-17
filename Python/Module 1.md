@@ -42,3 +42,54 @@ immutable values can't alias -- ints, floats, strings, tuples.
 <img width="298" alt="Screenshot 2024-01-24 at 10 58 56 AM" src="https://github.com/maddieamie/reading-notes/assets/118625447/407c5038-30b2-4096-b1d9-e7f7d2320bec">
 
 Write values that return new lists instead of mutating to avoid future confusion, as advice from Ned Batchedler. 
+
+# Class 02 
+
+_What are the key principles of Test-Driven Development (TDD) in Python, and how do they contribute to the overall quality of code?_
+
+Think about and write tests first!
+
+AAA: Arrange, Act and Assert.
+
+Arrange: you need to organize the data needed to execute that piece of code (input);
+Act: here you will execute the code being tested (exercise the behaviour);
+Assert: after executing the code, you will check if the result (output) is the same as you were expecting.
+
+Your code will be more reliable because it will produce expected outcomes with passing tests. If you craft tests to run the outputs that you need, then when they all pass when you're writing your code, you know you're close to done.
+
+
+_Explain the purpose of the if __name__ == '__main__': statement in Python scripts. What are some use cases for including this conditional in your code?_
+
+It tests to make sure that the main program is being run directly or if it is being imported by another file. You may want to import different files into the main program, or import the current file into another thing. Maybe your main file is a library that you want others to be able to import, but also you want to be able to run it on its own as a demo or as a tutorial. Maybe you want to import your file to run some unit tests but not run the whole thing directly while testing. 
+
+_Describe the concept of recursion in Python._
+
+You are calling the function you just defined inside itself-- directly or indirectly. 
+
+Properties of Recursion:
+
+- Performing the same operations multiple times with different inputs.
+- In every step, we try smaller inputs to make the problem smaller.
+- Base condition is needed to stop the recursion otherwise infinite loop will occur.
+
+- [Recursion explained visually article](https://www.freecodecamp.org/news/recursion-visually-explained-bec8cca14d9b/)
+
+- Maybe look up the tower of hanoi problem in smaller contexts. 
+
+_What is the difference between Python modules and packages? Explain how to create, import, and use them in your Python programs._
+
+Create modules by creating viable code in a file.py. Import module files into other modules by using the import statement and using dot notation to utilize the methods within the imported module. Otherwise, you can import modules as this : from <module_name> import <name(s)> to use the object names in imported program without referencing the program itself in the current code. You can also import like this: from <module_name> import <name> as <alt_name>[, <name> as <alt_name> …] to reassign the names of those imported methods to the local call stack. Or you could import the entire module and assign it an alternative name: import <module_name> as <alt_name>. 
+
+Extended use cases : [Python Modules and Packages](https://realpython.com/python-modules-packages/)
+
+**Bookmark and Review**
+
+[Google for Education: Python Lists](https://developers.google.com/edu/python/lists)
+
+[Google for Education: Python Strings](https://developers.google.com/edu/python/strings)
+
+[Python Modules and Packages](https://realpython.com/python-modules-packages/)
+
+[Pytest Documentation](https://docs.pytest.org/en/latest/)
+
+[PyTest Tutorial](https://www.guru99.com/pytest-tutorial.html) Up to section Running tests in parallel
