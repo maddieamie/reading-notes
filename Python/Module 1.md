@@ -99,7 +99,8 @@ Extended use cases : [Python Modules and Packages](https://realpython.com/python
 _General Notes_
 
 - it is the python programmer's responsibility to close a file in your program after you open it using open()
-- to iterate over the whole file line by line, it is generally quicker and more memory efficient to use this method: ``` >>> with open('dog_breeds.txt', 'r') as reader:
+- to iterate over the whole file line by line, it is generally quicker and more memory efficient to use this method:
+ >>> with open('dog_breeds.txt', 'r') as reader:
 >>>     # Read and print the entire file line by line
 >>>     for line in reader:
 >>>         print(line, end='')
@@ -107,21 +108,23 @@ Pug
 Jack Russell Terrier
 English Springer Spaniel
 German Shepherd
-```
+
 - 
 
 _What is the purpose of the ‘with’ statement when opening a file in Python, and how does it help manage resources while reading and writing files?_
 
-```
+
 with open('dog_breeds.txt') as reader:
     # Further file processing goes here
-```
+
+
 The ```with``` statement takes care of closing the file automatically after leaving the with block, even when encountering an error. It helps make sure that dtata is not remaining open and leaking into other environments outside of your code. It reduces unwanted behavior. You can also open with mode to describe the type of thing you are opening and the expected behavior of that file. 
 
-```
+
 with open('dog_breeds.txt', 'r') as reader:
-    # Further file processing goes here
-```
+  Further file processing goes here
+
+
 |Character | 	Meaning |
 |----------- | ------------ |
 | 'r'	|Open for reading (default)|
