@@ -93,3 +93,52 @@ Extended use cases : [Python Modules and Packages](https://realpython.com/python
 [Pytest Documentation](https://docs.pytest.org/en/latest/)
 
 [PyTest Tutorial](https://www.guru99.com/pytest-tutorial.html) Up to section Running tests in parallel
+
+## Class 03 
+
+_General Notes_
+
+- it is the python programmer's responsibility to close a file in your program after you open it using open()
+- to iterate over the whole file line by line, it is generally quicker and more memory efficient to use this method: ``` >>> with open('dog_breeds.txt', 'r') as reader:
+>>>     # Read and print the entire file line by line
+>>>     for line in reader:
+>>>         print(line, end='')
+Pug
+Jack Russell Terrier
+English Springer Spaniel
+German Shepherd
+```
+- 
+
+_What is the purpose of the ‘with’ statement when opening a file in Python, and how does it help manage resources while reading and writing files?_
+
+```
+with open('dog_breeds.txt') as reader:
+    # Further file processing goes here
+```
+The ```with``` statement takes care of closing the file automatically after leaving the with block, even when encountering an error. It helps make sure that dtata is not remaining open and leaking into other environments outside of your code. It reduces unwanted behavior. You can also open with mode to describe the type of thing you are opening and the expected behavior of that file. 
+
+```
+with open('dog_breeds.txt', 'r') as reader:
+    # Further file processing goes here
+```
+|Character | 	Meaning |
+|----------- | ------------ |
+| 'r'	|Open for reading (default)|
+|'w'	|Open for writing, truncating (overwriting) the file first|
+|'rb' or 'wb'|	Open in binary mode (read/write using byte data)|
+
+
+_Explain the difference between the ‘read()’ and ‘readline()’ methods for file objects in Python. Provide examples of when to use each method._
+
+Read() runs based on the size of bytes, where as readline() reads the amount of characters in a line. Readline(5) will print 5 characters in a line. .read() without arguments will print the whole file as a single string. .readlines() returns a list of what is in the file, line by line as a new index in the list. 
+
+Description:
+ | Method	| What It Does|
+ |--- | ---|
+|.read(size=-1)|	This reads from the file based on the number of size bytes. If no argument is passed or None or -1 is passed, then the entire file is read.|
+|.readline(size=-1)	|This reads at most size number of characters from the line. This continues to the end of the line and then wraps back around. If no argument is passed or None or -1 is passed, then the entire line (or rest of the line) is read.|
+|.readlines()|	This reads the remaining lines from the file object and returns them as a list.|
+
+_Briefly describe the concept of exception handling in Python. How can the ‘try’, ‘except’, and ‘finally’ blocks be used to handle exceptions and ensure proper execution of code? Provide a simple example._
+
