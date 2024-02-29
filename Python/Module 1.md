@@ -145,3 +145,18 @@ Description:
 
 _Briefly describe the concept of exception handling in Python. How can the ‘try’, ‘except’, and ‘finally’ blocks be used to handle exceptions and ensure proper execution of code? Provide a simple example._
 
+Use try to attempt to run your main code. Except can handle what to do when certain circumstances come up that could crash your program, and run different code inside that block instead. It can also provide chosen error messages. Finally can run any code that you want to always run regardless of any exceptions. 
+
+try:
+    x = int(input("Enter a number: "))
+    result = 10 / x
+    print("Result:", result)
+
+except ValueError:
+    print("Please enter a valid number.")
+
+finally:
+    print("You tried!")
+
+
+<img src="https://files.realpython.com/media/try_except_else_finally.a7fac6c36c55.png">
