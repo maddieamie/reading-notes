@@ -30,8 +30,7 @@ _Based on the “Names and Values in Python” reading, explain the difference b
 
 Mutable values can have multiple aliases, where as immutable values cannot alias. 
 
-**Notes for me: 
-**
+**Notes for me:**
 Assignment never copies data-- changes are visible through all names of the values. 
 a mutable aliasing.
 
@@ -96,7 +95,14 @@ Extended use cases : [Python Modules and Packages](https://realpython.com/python
 
 ## Class 03 
 
-_General Notes_
+
+[Read & Write Files in Python](https://realpython.com/read-write-files-python/)
+
+[Exceptions in Python](https://realpython.com/python-exceptions/)
+
+[File Objects - Reading and Writing to Files](https://www.youtube.com/watch?v=Uh2ebFW8OYM)
+
+**Notes for me:**
 
 - it is the python programmer's responsibility to close a file in your program after you open it using open()
 - to iterate over the whole file line by line, it is generally quicker and more memory efficient to use this method:
@@ -160,3 +166,89 @@ finally:
 
 
 <img src="https://files.realpython.com/media/try_except_else_finally.a7fac6c36c55.png">
+
+
+# Class 04
+
+[Classes and Objects](https://www.learnpython.org/en/Classes_and_Objects)
+
+[Thinking Recursively](https://realpython.com/python-thinking-recursively/)
+- Optional: Naive Recursion is Naive section and beyond
+
+[Pytest Fixtures and Coverage](https://www.linuxjournal.com/content/python-testing-pytest-fixtures-and-coverage)
+
+[Pytest Fixtures](https://docs.pytest.org/en/latest/fixture.html)
+
+**Notes for me**
+Read later: [Python Decorators](https://realpython.com/primer-on-python-decorators/)
+
+```
+class MyClass:
+    variable = "blah"
+
+    def function(self):
+        print("This is a message inside the class.")
+
+myobjectx = MyClass()
+
+print(myobjectx.variable)
+#output: blah
+
+myobjectx.function()
+#output: prints the message in the function
+```
+- looks like you access parts of the object using dot notation
+- the class assignment looks like a function call
+
+```
+class NumberHolder:
+
+   def __init__(self, number):
+       self.number = number
+
+   def returnNumber(self):
+       return self.number
+
+var = NumberHolder(7)
+print(var.returnNumber()) #Prints '7'
+```
+
+- "The __init__() function, is a special function that is called when the class is being initiated. It's used for assigning values in a class."
+
+```
+# define the Vehicle class
+class Vehicle:
+    name = ""
+    kind = "car"
+    color = ""
+    value = 100.00
+    def description(self):
+        desc_str = "%s is a %s %s worth $%.2f." % (self.name, self.color, self.kind, self.value)
+        return desc_str
+
+car2 = Vehicle()
+car2.name = "Jump"
+car2.color = "blue"
+car2.kind = "van"
+car2.value = 10000.00
+```
+
+_What are the key differences between classes and objects in Python, and how are they used to create and manage instances of a class?_
+
+Classes are templates for objects. Objects store variables and functions together into a single entity. You can create multiple objects with the same class, but each object holds its own copy of the class & its modifications in itself. You can access parts of the class using dot notation for each part of the 
+
+_Explain the concept of recursion and provide an example of how it can be used to solve a problem in Python. What are some best practices to follow when implementing a recursive function?_
+
+Recursion is when a function calls itself to solve a problem, until it reaches a base or terminal case. 
+
+_example from Daniel_ Recursion could be better for doing binary-like searches on structured data. It could also be good for a binary tree on IP addresses because the most calls you could get in a binary tree is 32 (for 32 bit data), better for when you don't know exactly how many calls you need to make. E.g. binary search.
+
+- define your base case (make sure it ends to avoid infinite loop)
+- python has a depth limit of 1000, so watch for the amount of function calls
+- cache results of expensive functions (memoization)
+- test and debug thoroughly TDD 
+
+_What is the purpose of pytest fixtures and code coverage in testing Python code? Explain how they can be used together to improve the quality and maintainability of a project._
+
+You define fixtures using a combination of `pytest.fixture` as well as a function defintion. You can use an object multiple times by setting a fixture's scope. You can also download a package called pytest-cov, which you can invoke with `--cov`. You should use it with arguments, i.e. `pytest --cov=myfunction`. It can help you determine if the expected results are actually happening with your code before you publish it and potentially break things. It can also give other devs an example of what each function is supposed to do. 
+
