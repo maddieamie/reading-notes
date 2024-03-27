@@ -227,4 +227,84 @@ You would use `random.int(1,6)` to simulate a random roll of a 6-sided die, with
 You can then write a function to hold the count of the number of times you can loop through your rolling function, set the loop to compare to the value you want to count, and then set the number of times to roll. Then calling the function with the parameter of how many times you want to roll the die will result in a count of the amount of times you rolled a specific number. 
 
 
+# Class 08
 
+_Reading_
+[List Comprehensions](https://www.pythonforbeginners.com/basics/list-comprehensions-in-python)
+[Primer on Decorators](https://realpython.com/primer-on-python-decorators/)
+
+_Audio_
+Listen (optional): [Debugging with PySnooper](https://www.pythonpodcast.com/pysnooper-python-debugging-episode-241/)
+
+
+_What is the basic syntax of Python list comprehension, and how does it differ from using a for loop to create a list? Provide an example of a list comprehension that squares the elements in a given list of integers._
+
+It provides a more compact and elegant way to manage lists. It is more flexible than for loops, and usually faster than other methods. 
+
+```
+# basic syntax
+my_new_list = [ expression for item in iterable_object ]
+
+# with a condition
+my_new_list = [ expression for item in iterable_object if condition]
+```
+where:
+- **expression** is the operation we are performing on the item
+- **item** is an element of the iteratble_object
+- the **iterable_object** is a list, tuple, set, etc, which we use to create a new list. Can also use `range()` here. 
+- **my_new_list** is the list created by executing the expression on items in the iterable_object
+- **condition** - if the condition is True, it is added to my_new_list, otherwise it is False & discarded from the output
+
+Example of squares with a condition of only squaring even numbers:
+```
+myList=[1,2,3,4,5,6]
+print("The original list is:",myList)
+newList=[item**2 for item in myList if item%2==0]
+print("The output list is:",newList)
+```
+
+_What is a decorator in Python?_
+
+Decorators are functions that take in another function and extend the behavior of the latter function without explicitly modifying it. 
+
+_Explain the concept of decorators in Python. How do they work, and what are some common use cases for them? Provide an example of a simple decorator function from the reading._
+
+They take in another function as a parameter and provide extra function behavior. Wrapping a function in another function. 
+Examples:
+- timer functions to measure the time it takes to execute something
+- debugging code with an advanced decorator, especially with functions you don't directly call yourself.
+- slow down code, like to rate-limit a funciton that continuously checks if a resource has changed (like online).
+- register plugins to confirm that a function exists
+- authenticate users
+
+Good boilerplate syntax for decorators:
+```
+import functools
+
+def decorator(func):
+    @functools.wraps(func)
+    def wrapper_decorator(*args, **kwargs):
+        # Do something before
+        value = func(*args, **kwargs)
+        # Do something after
+        return value
+    return wrapper_decorator
+```
+
+```
+def do_twice(func):
+    def wrapper_do_twice():
+        func()
+        func()
+    return wrapper_do_twice
+```
+
+```
+def do_twice(func):
+    def wrapper_do_twice(*args, **kwargs):
+        func(*args, **kwargs)
+        func(*args, **kwargs)
+    return wrapper_do_twice
+```
+
+:space_invader: I want to go back to the decorator article and read about "Fancy Decorators" sometime. :space_invader: 
